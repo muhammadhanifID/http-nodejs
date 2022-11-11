@@ -12,20 +12,15 @@ createServer((req, res) => {
  
 // note: use npm install node-fetch@2.0 to be able to use "require"
 
-console.log("trying ...")
 
-let body = {
-
-fetch('https://reetenstore.id/api/profile', {
-    method: 'POST',
-    body: formdata,
-   
-})
-    .then(res => res.json())
-    .then(json => console.log(json))
-    .catch (err => console.log(err))
+const response = await fetch('https://reetenstore.id/api/profile', {
+	method: 'post',
+	body: formData,
+	
+});
+const data = await response.json();
 
 
-  res.write('Hello Worldsa!');
+  res.write('Hellso Worlds');
   res.end();
 }).listen(process.env.PORT);

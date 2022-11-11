@@ -1,7 +1,7 @@
 import { createServer } from 'http';
 import fetch from 'node-fetch';
 
- const fetch = require('node-fetch');
+
 createServer((req, res) => {
   let formData = new FormData();
 	formData.append(

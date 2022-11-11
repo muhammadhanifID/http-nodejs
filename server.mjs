@@ -1,4 +1,5 @@
 import { createServer } from 'http';
+import fetch from 'node-fetch';
 
  const fetch = require('node-fetch');
 createServer((req, res) => {
@@ -15,7 +16,7 @@ console.log("trying ...")
 
 let body = {
 
-fetch('https://blahblah.com/blah', {
+fetch('https://reetenstore.id/api/profile', {
     method: 'POST',
     body: formdata,
    
